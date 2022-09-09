@@ -1,0 +1,76 @@
+---
+title: "SUMMARY OF MODULE TWO"
+author: "Odunayo Ajewole"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+<style>
+h1.title{
+  color: red
+}
+h4.author{
+  color: red
+}
+h4.date{
+  color: red
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+In episode two, the emphasis was on creating charts for single variables. The topics in the lecture video are;
+
+ -	Creating bar charts for categorical variables
+ -	Creating pie charts for categorical variables
+ -	Creating histograms for quantitative variables
+ -	Creating box plots for quantitative variables
+ -	Overlaying plots and
+ -	Saving images
+ -	Challenge and the solution.
+
+### Lessons from the lectures;
+
+   - The charts appropriate for visualizing single categorical/qualitative variables are bar charts and pie charts
+   - Bar charts are always the preferred option instead of pie charts because pie charts are harder to read. In fact, pie charts should seldom be used
+   - The charts appropriate for single quantitative variables are histograms and box plot.
+   - Box plots are a versatile form of displaying quantitative univariates, they are most useful in detecting outliers.
+   - The ability of R to customize charts endless is one of its great strength, and one way this is depicted is the creation of overlaying plots, that is putting plots over one another in the same graph giving multiple view of the same data in a single graphics.
+   - R has several options for saving created charts so they can be used for diverse purposes and reporting. Some of the formats include as image, pdf etc.
+
+### Github link to the repository containing the code.
+[the Github link](https://github.com/OdunayoAjewole/Getting-Started/blob/main/02%20Chart%20for%20univariates.R)
+
+### Solution to the challenge
+
+#### Using the petal.Length variable of the inbuilt 'iris' dataset to construct a layered plot
+
+```{r Loading, viewing and attaching the data to the workspace}
+data("iris")
+View(iris)
+attach(iris)
+```
+
+#### Layering plots with iris$petal.Length
+
+To get a layering plot, first, a histogram is plotted, and a kernel density plot is inserted before finally adding a line plot.
+
+```{r echo=TRUE}
+hist(Petal.Length, col = "grey", prob = TRUE, main = "Histogram of 
+     Petal.Length in the iris dataset")
+
+lines(density(Petal.Length), col = "red")
+
+rug(Petal.Length, col = "blue")
+```
+
+
+
+
+
+
+
+

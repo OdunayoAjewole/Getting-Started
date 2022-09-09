@@ -1,0 +1,44 @@
+---
+title: "SUMMARY OF MODULE THREE"
+author: "Odunayo Ajewole"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+The third module of the lecture covers the various statistics applicable for univariates. The topics covered are;
+
+-	Calculating frequencies
+-	Calculating descriptive
+-	Using a single proportion Hypothesis test and confidence interval
+-	Using a mean Hypothesis test and confidence interval
+-	Using a single categorical variable One sample chi-square test and
+-	Examining robust statistics for univariate analyses.
+
+#### Some salient points about statistics for one variable:
+
+After the graphical analysis of the data, the numerical description is next. Frequency is the most appropriate for categorical variables. The first video of the module showed how to run frequencies of categorical variables, as well as sorting them either in increasing or decreasing order. It also showed how to convert the frequency value to proportion and percentages.
+
+Descriptive for quantitative variables include minimum value, maximum value, median, mean, standard deviation, skewness, kurtosis, first, second and third interquartile ranges. They can be gotten via several functions such as summary function, fivenum, describe (pysch package).
+
+The most basic inferential statistic is single proportion and this is done with the ‘prop.test’.
+
+Also, hypothesis testing can be two tailed or one-tailed/directional.
+One sample chi square test is also called goodness of fit test and it is run with chisq.test()
+
+The concept of robust statistics is applied when a dataset does not fit the assumptions of the test required. The help to counteract the effect of anomalies such as outliers and non-normality in a distribution.
+
+Some robust statistics for univariate analysis mentioned in the lecture include;
+
+- Median (for center)
+- Trimmed mean (for center)
+- Median absolute deviation (for variation)
+- Interquartile range (for variation)
+- Tukey’s hinges (for variation)
+
+### Code to the repository containing it's code
+[Github link](https://github.com/OdunayoAjewole/Getting-Started/blob/main/03%20Statistics%20for%20one%20variable.R)
